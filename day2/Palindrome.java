@@ -1,29 +1,26 @@
-package week1.day2;
+package week3.day2;
 
 public class Palindrome {
-	
+
 	public static void main(String[] args) {
 		
-		int num=24242;
-		int input=num;
-		int output=0,rem;
+		String value="madam";
+		String rev="";
 		
-		for (num=24242; num>0; num=num/10) {
-			
-			rem=num%10;
-			
-			output=output*10+rem;
+		for (int i = value.length()-1; i>=0; i--) {
+			rev += value.charAt(i);
 		}
-		
-		if (input==output) {
+			if (value.equalsIgnoreCase(rev)) {
+				System.out.println("The given string is Palindrome :" +rev);
+			}
+				else {
+					System.out.println("It is not a palindrome");
 			
-			System.out.println("The given number"+ input + "is Palindrome");
-		}
-		
-		else {
+				
+			}
 			
-			System.out.println("The given number"+ input+ "is not a Palindrome");
 		}
+
 	}
 
-}
+
